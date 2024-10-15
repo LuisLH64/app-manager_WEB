@@ -9,7 +9,19 @@ export const config: ViewConfig = {
 
 const loginI18n: LoginI18n = {
   ...new LoginOverlayElement().i18n,
-  header: { title: 'Hilla Auth Starter', description: 'Login using user/user or admin/admin' },
+  header: { title: 'App Manager', description: 'Faça o login na sua conta' },
+  form: {
+    username: 'Usuário', password: 'Senha',
+    title: '',
+    submit: 'Login',
+    forgotPassword: 'Esqueceu a senha?'
+  },
+  errorMessage: {
+    title: 'Erro!',
+    message: 'Usuário ou senha incorretos!',
+    username: 'Coloque o seu usuário',
+    password: 'Coloque sua senha',
+  }
 };
 
 export default function LoginView() {

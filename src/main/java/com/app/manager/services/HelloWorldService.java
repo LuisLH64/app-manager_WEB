@@ -1,4 +1,4 @@
-package com.example.application.services;
+package com.app.manager.services;
 
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.hilla.BrowserCallable;

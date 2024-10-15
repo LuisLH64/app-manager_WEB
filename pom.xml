@@ -4,15 +4,15 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <!-- Project from https://start.vaadin.com/project/55601b16-abd9-437d-915d-2d41dd7603ce -->
-    <groupId>com.example.application</groupId>
-    <artifactId>appmanager-web</artifactId>
-    <name>appmanager-web</name>
+    <groupId>com.app</groupId>
+    <artifactId>manager.web</artifactId>
+    <name>App Manager WEB</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
         <java.version>21</java.version>
-        <vaadin.version>24.5.0.rc1</vaadin.version>
+        <vaadin.version>24.4.13</vaadin.version>
     </properties>
 
     <parent>
@@ -58,10 +58,12 @@
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin</artifactId>
         </dependency>
+        
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-spring-boot-starter</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.parttio</groupId>
             <artifactId>line-awesome</artifactId>
@@ -73,7 +75,7 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
-        <dependency>
+        <!-- <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
@@ -82,22 +84,29 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
+        </dependency> -->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>annotationProcessor</scope>
         </dependency>
     </dependencies>
 
@@ -112,7 +121,7 @@
             <plugin>
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-maven-plugin</artifactId>
-                <version>${vaadin.version}</version>
+                <version>24.4.13</version>
                 <executions>
                     <execution>
                         <goals>
